@@ -12,6 +12,10 @@ This project is inspired by the [roadmap.sh Unit Converter project](https://road
 - 🔄 **No database required** – all logic is in code!
 - 📦 **Full-stack**: Java Spring Boot (backend) + HTML/CSS/JS (frontend)
 
+
+## 🖼️ Screenshot
+
+![Unit Converter Screenshot](img.png)
 ## 🧮 Supported Units
 
 ### Length
