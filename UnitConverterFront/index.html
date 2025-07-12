@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- This meta tag is crucial for responsiveness -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit Converter</title>
+
+  <!-- Add a Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔄</text></svg>">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Your Custom CSS (now much smaller) -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container mt-4">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6">
+        <div class="card shadow-sm">
+          <div class="card-header text-center">
+            <h1>Unit Converter</h1>
+          </div>
+          <div class="card-body">
+            <!-- Bootstrap Nav Tabs -->
+            <ul class="nav nav-tabs nav-fill" id="converterTabs" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="length-tab" data-bs-toggle="tab" data-bs-target="#length-section" type="button" role="tab" aria-controls="length-section" aria-selected="true">Length</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="weight-tab" data-bs-toggle="tab" data-bs-target="#weight-section" type="button" role="tab" aria-controls="weight-section" aria-selected="false">Weight</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="temperature-tab" data-bs-toggle="tab" data-bs-target="#temperature-section" type="button" role="tab" aria-controls="temperature-section" aria-selected="false">Temperature</button>
+              </li>
+            </ul>
+
+            <!-- Tab Content -->
+            <div class="tab-content" id="converterTabContent">
+              <!-- Length Converter -->
+              <div class="tab-pane fade show active" id="length-section" role="tabpanel" aria-labelledby="length-tab">
+                <div class="mb-3">
+                  <label for="length-value" class="form-label">Value:</label>
+                  <input type="number" class="form-control" id="length-value" placeholder="Enter value">
+                </div>
+                <div class="mb-3">
+                  <label for="length-from" class="form-label">From:</label>
+                  <select class="form-select" id="length-from">
+                    <option value="millimeter">Millimeter</option>
+                    <option value="centimeter">Centimeter</option>
+                    <option value="meter">Meter</option>
+                    <option value="kilometer">Kilometer</option>
+                    <option value="inch">Inch</option>
+                    <option value="foot">Foot</option>
+                    <option value="yard">Yard</option>
+                    <option value="mile">Mile</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="length-to" class="form-label">To:</label>
+                  <select class="form-select" id="length-to">
+                    <option value="millimeter">Millimeter</option>
+                    <option value="centimeter">Centimeter</option>
+                    <option value="meter">Meter</option>
+                    <option value="kilometer">Kilometer</option>
+                    <option value="inch">Inch</option>
+                    <option value="foot">Foot</option>
+                    <option value="yard">Yard</option>
+                    <option value="mile">Mile</option>
+                  </select>
+                </div>
+                <button class="btn btn-primary w-100" id="length-convert-btn" type="button">Convert</button>
+                <p class="result mt-3 fw-bold text-primary" id="length-result"></p>
+              </div>
+
+              <!-- Weight Converter -->
+              <div class="tab-pane fade" id="weight-section" role="tabpanel" aria-labelledby="weight-tab">
+                <div class="mb-3">
+                  <label for="weight-value" class="form-label">Value:</label>
+                  <input type="number" class="form-control" id="weight-value" placeholder="Enter value">
+                </div>
+                <div class="mb-3">
+                  <label for="weight-from" class="form-label">From:</label>
+                  <select class="form-select" id="weight-from">
+                    <option value="milligram">Milligram</option>
+                    <option value="gram">Gram</option>
+                    <option value="kilogram">Kilogram</option>
+                    <option value="ounce">Ounce</option>
+                    <option value="pound">Pound</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="weight-to" class="form-label">To:</label>
+                  <select class="form-select" id="weight-to">
+                    <option value="milligram">Milligram</option>
+                    <option value="gram">Gram</option>
+                    <option value="kilogram">Kilogram</option>
+                    <option value="ounce">Ounce</option>
+                    <option value="pound">Pound</option>
+                  </select>
+                </div>
+                <button class="btn btn-primary w-100" id="weight-convert-btn" type="button">Convert</button>
+                <p class="result mt-3 fw-bold text-primary" id="weight-result"></p>
+              </div>
+
+              <!-- Temperature Converter -->
+              <div class="tab-pane fade" id="temperature-section" role="tabpanel" aria-labelledby="temperature-tab">
+                <div class="mb-3">
+                  <label for="temp-value" class="form-label">Value:</label>
+                  <input type="number" class="form-control" id="temp-value" placeholder="Enter value">
+                </div>
+                <div class="mb-3">
+                  <label for="temp-from" class="form-label">From:</label>
+                  <select class="form-select" id="temp-from">
+                    <option value="celsius">Celsius</option>
+                    <option value="fahrenheit">Fahrenheit</option>
+                    <option value="kelvin">Kelvin</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="temp-to" class="form-label">To:</label>
+                  <select class="form-select" id="temp-to">
+                    <option value="celsius">Celsius</option>
+                    <option value="fahrenheit">Fahrenheit</option>
+                    <option value="kelvin">Kelvin</option>
+                  </select>
+                </div>
+                <button class="btn btn-primary w-100" id="temp-convert-btn" type="button">Convert</button>
+                <p class="result mt-3 fw-bold text-primary" id="temp-result"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS Bundle (needed for tabs) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+</html>
