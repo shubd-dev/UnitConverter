@@ -31,20 +31,20 @@ This project is inspired by the [roadmap.sh Unit Converter project](https://road
 
 1. **Clone the repo**
    ```bash
-   git clone https://github.com/yourusername/your-repo.git
+   git clone https://github.com/shubd-dev/UnitConverter.git
    cd your-repo
    ```
 
 2. **Run the backend**
    ```bash
-   cd backend
+   cd UnitConverter
    ./mvnw spring-boot:run
    ```
    (or use `mvn spring-boot:run` if you have Maven installed)
 
 3. **Open the frontend**
    ```bash
-   cd ../frontend
+   cd UnitConverterFront
    # Open index.html in your browser or use Live Server
    ```
 
