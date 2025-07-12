@@ -32,7 +32,7 @@ This project is inspired by the [roadmap.sh Unit Converter project](https://road
 1. **Clone the repo**
    ```bash
    git clone https://github.com/shubd-dev/UnitConverter.git
-   cd your-repo
+   cd UnitConverter
    ```
 
 2. **Run the backend**
